@@ -1,0 +1,45 @@
+===============================   AUTOMATOR ===============================
+
+APP FEATURES
+*********************************************************************************
+ 1. Leave Tracker
+  The team can update their unavailability information so that the work can be planned better in a team.
+ 2. Bugs
+   Any issue encountered by the team can be logged and tracked. Also, resolution will be helpful for future references.
+ 3. Tasks
+   i. The task can be assigned to any team member.
+   ii. Once task created, the respective team member shall get notified via email regarding the details of the task assigned to him.
+   iii. The tasks being worked upon by the team members can be tracked effectively.
+   iv. The team member can provide updates to the task worked upon by him.
+   v. Any unfinished tasks can be tracked and picked up by team member having bandwidth.
+ 4. Users
+  i. When new user is added to the system, he shall be notified via an email regarding  login credentials.
+  ii. On receiving the credentials, the user can change password.
+ 5. UserRoles
+  i. Only admin can have special privileges to add tasks to the team. He holds access to all other critical functionalities.
+  ii Normal user has all the basic access to the system.
+ 6. References
+  i. Any files can be uploaded to the system. It acts as a central repository.
+  ii. Any important references can be shared via updating the links to the study material/other sites.
+*********************************************************************************
+
+ SETTING UP THE SYSTEM
+ *********************************************************************************
+
+1. Set up database
+  i. Create database. MySQL preferably since this is tested against MySQL db.
+  ii.Run the SQL script present in Automator_CoffeeBeans.sql
+
+2. Set up application
+   i. Provide appropriate values to all the properties in config file
+   ii.Set the Log appender in log4j.properties.
+   iii. Provide mailing credentials and database credentials
+   iv. Generate a password for a sample user with admin role and insert the record into Users table in database. Use PasswordHandler to generate password.
+   iv. Export war file
+
+3. Set up server
+  i. Install tomcat server.
+  ii. Deploy war file to Tomcat.
+ *********************************************************************************
+
+===========================================================================
